@@ -17,4 +17,29 @@ tabs.forEach(tab => {
     tabContent.classList.add('is-visible')
     tab.classList.add('is-active')
   })
+
+  tab.addEventListener('keydown', event => {
+    event.preventDefault()
+    const { key } = event
+
+    if (key === 'ArrowRight') {
+      console.log("direita")
+    }
+
+    if (key === 'ArrowLeft') {
+      console.log("esquerda")
+    }
+
+    if (key === 'Home') {
+      console.log("home")
+    }
+
+    if (key === 'End') {
+      console.log("end") 
+    }
+
+    if (key === ' ' || key === 'Enter') {
+      console.log("espaço ou enter") 
+    }
+  })
 })
